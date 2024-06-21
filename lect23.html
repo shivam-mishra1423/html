@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     .container{
+        width: 800px;
+        height: 100vh;
+        background-color: beige;
+        border: 5px solid black;
+     }
+     .box{
+        width: 250px;
+        height: 80px;
+        background-color: blue;
+        border: 3px solid yellow;
+       border-radius: 10px;
+       margin: 10px;
+       position: relative;
+       /* animation-name: rightmovement;
+       animation-duration: 5s;
+       animation-iteration-count: 2;
+       animation-delay: 2s;
+       animation-timing-function: linear ;
+       animation-direction: alternate;
+       animation-fill-mode: forwards; */
+       animation: 5s linear 1s infinite alternate none running rightmovement;
+     }
+      @keyframes  rightmovement {
+        from{
+            top:0;
+            left: 0;;
+        }
+        to{
+            top: 0;
+            left: 500px;
+        }
+      } 
+      #box2{
+        width: 250px;
+        height: 80px;
+        background-color: blue;
+        border: 3px solid yellow;
+       border-radius: 10px;
+       margin: 10px;
+       position: relative;
+       animation: 5s ease-in 1s infinite alternate none running leftmovement;
+      }
+      @keyframes  leftmovement {
+        from{
+            top:180px;
+            left:120px;
+        }
+        to{
+            top: 200px;
+            left: 0px;
+        }
+    }
+    #circle{
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        border: 3px solid yellow;
+       border-radius: 50px;
+       margin: 10px;
+       position: relative;
+       top: 5px;
+       left:30%;
+       animation: 10s ease-in-out 0s infinite alternate-reverse none running leftmovement;
+
+       @keyframes  leftmovement {
+        0%{
+            top: 2%;
+            left:1%;
+        }
+        30%{
+            top: 5%;
+            left:4%;
+        }
+        60%{
+            top: 8%;
+            left:10%;
+        }
+        100%{
+            top: 9%;
+            left:10%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+        <div id="box2"></div>
+        <div>
+            <div id="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
